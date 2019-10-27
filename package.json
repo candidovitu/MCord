@@ -1,0 +1,14 @@
+{
+  "name": "discordo.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Vítor cândido",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "request": "^2.88.0",
+    "ws": "^7.2.0"
+  }
+}
