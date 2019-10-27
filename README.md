@@ -17,3 +17,6 @@ client.events.on('message', msg=>{
 
 client.login('TOKEN DO SEU BOT :D');
 ```
+
+Discordo.js está disponível no npm!
+https://www.npmjs.com/package/discordo.js
