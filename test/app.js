@@ -14,14 +14,22 @@ client.events.on('message', msg=>{
             if(msg.author.id === '535940900157784064'){
                 const code = args.join(' ');
                 try{
-                    msg.channel_id.send(eval(code) || 'Sem resultado');
+                    msg.channel.send(eval(code) || 'Sem resultado');
                }catch(e){
-                   msg.channel_id.send('```js\n'+e+'\n```');
+                   msg.channel.send('```js\n'+e+'\n```');
                }
             }
         break;
         case 'testar':
-            msg.channel_id.send(`Hm.. Um teste, <@${msg.author.id}>?`);
+            msg.channel.send(`Hm.. Um teste, <@${msg.author.id}>?`);
+        break;
+        case 'ping':
+            console.log(msg.author.id)
+            msg.reply('pong :ping_pong:', m=>{
+                setTimeout(()=>{
+                    m.edit('Lorem');
+                },5000);
+            });
         break;
     }
 });

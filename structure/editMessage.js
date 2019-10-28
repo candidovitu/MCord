@@ -1,11 +1,11 @@
 const request = require('request');
 const auth = require('./login');
 
-Object.prototype.send = function(content, cb){
+Object.prototype.edit = function(content, cb){
     if(!content) return process.emitWarning('Message cannot be empty', 'DiscordAPIError');
     var options = {
-        uri: `https://discordapp.com/api/channels/${this}/messages`,
-        method: 'POST',
+        uri: `https://discordapp.com/api/channels/${this.channel_id}/messages/${this.id}`,
+        method: 'PATCH',
         json: {
             "content": content
         },
@@ -21,4 +21,4 @@ Object.prototype.send = function(content, cb){
     });
 }
 
-module.exports = send;
+module.exports = edit;
