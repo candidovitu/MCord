@@ -14,7 +14,8 @@ client.events.on('message', msg=>{
             if(msg.author.id === '535940900157784064'){
                 const code = args.join(' ');
                 try{
-                    msg.channel.send(eval(code) || 'Sem resultado');
+                    var response = eval(code);
+                    msg.channel.send('```js\n'+response.toString()+'\n```');
                }catch(e){
                    msg.channel.send('```js\n'+e+'\n```');
                }
@@ -24,11 +25,16 @@ client.events.on('message', msg=>{
             msg.channel.send(`Hm.. Um teste, <@${msg.author.id}>?`);
         break;
         case 'ping':
-            console.log(msg.author.id)
-            msg.reply('pong :ping_pong:', m=>{
-                setTimeout(()=>{
-                    m.edit('Lorem');
-                },5000);
+            msg.reply('pong! :ping_pong:').then(()=>{
+                console.log('mensagem enviada!!');
+            }).catch(err=>{
+                console.log(err);
+            });
+            
+        break;
+        case 'info':
+            client.users.get(msg.author.id).then(user=>{
+                msg.channel.send(`Usuário: \`${user.username}#${user.discriminator}\`\nID: ${user.id}\nAvatar: ${user.avatar}\nhttps://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`);
             });
         break;
     }

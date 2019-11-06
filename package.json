@@ -1,10 +1,21 @@
 {
-  "name": "discordo.js",
-  "version": "1.0.3",
-  "description": "",
+  "name": "mcord",
+  "version": "1.2.3",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "description": "Biblioteca para criar Discord BOTs, utilizando a Discord API.",
   "main": "index.js",
-  "repository": "https://github.com/candidovitu/Discordo.js",
-  "keywords": [],
+  "repository": "https://github.com/candidovitu/MCord",
+  "keywords": [
+    "discord",
+    "discordapp",
+    "dicordapi",
+    "mcord"
+  ],
+  "scripts": {
+    "test": "nodemon test/app.js"
+  },
   "author": "Vítor cândido",
   "license": "ISC",
   "dependencies": {

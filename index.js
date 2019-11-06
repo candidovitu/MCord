@@ -7,7 +7,8 @@ let ready = false;
 const structure = {
     sendMessage: require('./structure/sendMessage'),
     replyMessage: require('./structure/replyMessage'),
-    editMessage: require('./structure/editMessage')
+    editMessage: require('./structure/editMessage'),
+    users: require('./structure/users'),
 }
 
     const GATEWAY_URL = "wss://gateway.discord.gg/?v=6&encoding=json";
@@ -95,5 +96,6 @@ const structure = {
         events,
         login:(token)=>{
             auth.set(token);
-        }
+        },
+        users: structure.users
     }
