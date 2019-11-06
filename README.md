@@ -29,7 +29,7 @@ client.login('TOKEN DO SEU BOT :D');
 | 1.0.2     | Npm update      |  :heavy_check_mark:	 |
 | 1.0.3     | Npm update      |  :heavy_check_mark:	 |
 | 1.2.0     | Eventos "messageEdit", "messageUpdate", "messageDelete", "presenceUpdate" e "guildCreate" adicionados. Callback nos métodos "send" e "reply" adicionado. Função para editar mensagem criada. Diretório contendo [exemplos](https://github.com/candidovitu/Discordo.js/tree/master/examples) criado.      |  :heavy_check_mark:	 |
-| 1.2.0     | Método "users" criado. Promises! [exemplos](https://github.com/candidovitu/Discordo.js/tree/master/examples) criado.      |  :tools:	 |
+| 1.2.0     | Método "users" criado. Promises! [exemplos](https://github.com/candidovitu/Discordo.js/tree/master/examples)      |  🛠	 |
 --------------
 MCord está disponível no npm!
 > https://www.npmjs.com/package/MCord
